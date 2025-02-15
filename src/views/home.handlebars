@@ -1,0 +1,8 @@
+<div>
+  <h2>Lista de Productos</h2>
+  <ul id="productsListHTML">
+    {{#each products}}
+      <div id="cardsHTML"><p>Producto: {{this.title}}</p><p>Precio: {{this.price}}</p><p>Stock: {{this.stock}}</p></div>
+    {{/each}}
+  </ul>
+</div>

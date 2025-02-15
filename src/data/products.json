@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Chomba Nike",
+    "description": "Chomba",
+    "code": "ABC301",
+    "price": 890,
+    "stock": 28,
+    "category": "Ropa",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 2,
+    "title": "Chomba Adidas",
+    "description": "Chomba",
+    "code": "ABC308",
+    "price": 790,
+    "stock": 22,
+    "category": "Ropa",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 3,
+    "title": "Chomba Asics 4",
+    "description": "Chomba",
+    "code": "ABC323",
+    "price": 700,
+    "stock": 12,
+    "category": "Ropa",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 4,
+    "title": "Chomba Lacoste",
+    "description": "Chomba",
+    "code": "ABC433",
+    "price": 234,
+    "stock": 1,
+    "category": "Ropa",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 5,
+    "title": "Chomba Puma",
+    "description": "Chomba",
+    "code": "ABC758",
+    "price": 111,
+    "stock": 26,
+    "category": "Ropa",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 6,
+    "title": "Chomba Asics",
+    "description": "Chomba",
+    "code": "ABC879",
+    "price": 750,
+    "stock": 36,
+    "category": "Ropa",
+    "status": true,
+    "thumbnail": ""
+  }
+]
