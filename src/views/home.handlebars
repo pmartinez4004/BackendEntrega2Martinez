@@ -1,8 +1,33 @@
 <div>
   <h2>Lista de Productos</h2>
+  <div id="contenedorPagina>">
   <ul id="productsListHTML">
-    {{#each products}}
-      <div id="cardsHTML"><p>Producto: {{this.title}}</p><p>Precio: {{this.price}}</p><p>Stock: {{this.stock}}</p></div>
+    {{#each docs}}
+    <div id="cardsHTML">
+      <p>Producto: {{this.title}}</p>
+      <p>Precio: {{this.price}}</p>
+      <p>Stock: {{this.stock}}</p> <button class="productAddToCart" id={{this.id}}>Agregar</button>
+      <button class="productDetail" id={{this.id}}>Detalles Producto</button>
+    </div>
     {{/each}}
   </ul>
+</div>
+
+
+<div id="paginacion">
+  <p>Página {{page}} de {{totalPages}}</p>
+
+  {{#if hasPrevPage}}
+  <a href="/?page={{prevPage}}">Anterior   </a>
+  {{/if}}
+
+  {{#if hasNextPage}}
+  <a href="/?page={{nextPage}}">    Siguiente</a>
+  {{/if}}
+
+</div>
+
+<button id="goToPreCart1">Ver carrito</button>
+
+<script src="/js/index1.js"></script>
 </div>

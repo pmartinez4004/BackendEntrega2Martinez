@@ -82,15 +82,84 @@ title{
 #productsListHTML{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around; 
+    gap: 20px; 
+    padding: 20px;
+    list-style-type: none; 
+    margin: 0;
 }
 
 #cardsHTML{
     flex-flow: column;
-    height: 180px!important;
-    width: 220px!important;
     text-align:center;
     background-color:lightgray;
     border: 2px solid black;
     margin:10px;
     border-radius: 10px;
 }
+
+ 
+   
+  #cardsHTML {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: #f9f9f9;
+    width: 200px; /* Establecer ancho uniforme */
+    text-align: center;
+  }
+  
+  
+  #cardsHTML button {
+    display: block;
+    margin: 10px auto; 
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #cardsHTML button:hover {
+    background-color: #0056b3;
+  }
+
+#paginacion {
+    display: block;
+    text-align: center;
+    margin-top: 30px; 
+  }
+  
+  
+  #paginacion a {
+    margin: 0 10px; 
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+  }
+  
+  #paginacion a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Botón "Ver carrito" */
+  #goToPreCart1 {
+    display: block;
+    margin: 20px auto; 
+    margin-top:40px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size:18px;
+  }
+  
+  #goToPreCart1:hover {
+    background-color: #218838;
+  }

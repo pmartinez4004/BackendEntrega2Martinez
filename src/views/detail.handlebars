@@ -1,0 +1,71 @@
+<h2>Detalle</h2>
+<ul id="productsList">
+  {{#each product}}
+  <div id="cards">
+    <p>Producto: {{this.title}}</p>
+    <p>Tipo: {{this.description}}</p>
+    <p>Precio: {{this.price}}</p>
+    <p>Stock: {{this.stock}}</p>
+    <p>Categoria: {{this.category}}</p>
+    <p>Codigo: {{this.code}}</p>
+     <p>Id: {{this._id}}</p>
+    <button class="productAddDetail1" id={{this._id}}>Agregar al Carrito</button>
+  </div>
+  {{/each}}
+</ul>
+<button id="goToPreCart">Ver Carrito</button>
+
+<button id="volverHome1">Volver a Pagina Principal</button>
+
+
+<script defer>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.productAddDetail1');
+  
+    buttons.forEach(button => {
+      button.addEventListener('click', async (event) => {
+        const productId = event.target.id; 
+        const cartId = "67c521c2beba75cc3cc568f6"; // Toma por defecto este carrito para hacer agregar productos desde la pantalla
+                                                   // no borrar este carrito!!!
+        try {
+          
+          const response = await fetch(`/api/carts/${cartId}/product/${productId}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          });
+  
+          if (response.ok) {
+            const data = await response.json();
+            console.log("Producto agregado al carrito:", data);
+            alert("Producto agregado con éxito!");
+          } else {
+            console.error("Error al agregar el producto al carrito:", response.statusText);
+            alert("No se pudo agregar el producto. Inténtalo de nuevo.");
+          }
+        } catch (error) {
+          console.error("Error en la solicitud:", error);
+          alert("Ocurrió un error al intentar agregar el producto.");
+        }
+      });
+    });
+  });
+
+
+  const preCartButton = document.getElementById('goToPreCart');
+  preCartButton.addEventListener('click', () => {
+    window.location.href = '/preCart/'; 
+  });
+
+ const homeButton = document.getElementById('volverHome1');
+  homeButton.addEventListener('click', () => {
+    window.location.href = '/'; 
+  });
+
+
+</script>
+
+
+

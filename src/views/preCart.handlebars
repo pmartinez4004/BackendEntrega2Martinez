@@ -1,0 +1,35 @@
+<h3>Seleccionar un Carrito</h3>
+
+<!-- Dropdown para listar los carritos -->
+<select id="cartSelector">
+    <option value="" disabled selected>Selecciona un carrito</option>
+    {{#each carts}}
+    <option value="{{this._id}}">Carrito ID: {{this._id}}</option>
+    {{/each}}
+</select>
+
+<button id="selectCartButton">Mostrar Carrito</button>
+
+
+<script>
+    const cartSelector = document.getElementById('cartSelector'); 
+    const selectCartButton = document.getElementById('selectCartButton'); 
+    const cartDetailsDiv = document.getElementById('cartDetails'); 
+
+    selectCartButton.addEventListener('click', async () => {
+        const selectedCartId = cartSelector.value; 
+
+        if (!selectedCartId) { 
+            alert('Por favor selecciona un carrito primero.');
+            return;
+        }
+
+
+        if (selectedCartId) {
+            window.location.href = `/carts/${selectedCartId}`; 
+        }
+    });
+
+   
+</script>
+
